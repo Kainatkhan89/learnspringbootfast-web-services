@@ -19,7 +19,7 @@ public class Module {
     @Column(name = "description")
     private String description;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "style_code")
     private ModuleStyleCode styleCode;
 
