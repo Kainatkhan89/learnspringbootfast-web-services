@@ -6,6 +6,10 @@ import com.kainat.learnspringbootfastwebservices.entities.module.Module;
 import com.kainat.learnspringbootfastwebservices.enums.styles.Color;
 import com.kainat.learnspringbootfastwebservices.enums.styles.Icon;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
+
 public class ModuleMapper {
 
     public static ModuleDTO toDTO(Module module) {
@@ -25,6 +29,14 @@ public class ModuleMapper {
         }
 
         return dto;
+    }
+
+    public static List<ModuleDTO> toDTOList(List<Module> modules) {
+        if (modules == null) {
+            return null;
+        }
+
+        return modules.stream().map(ModuleMapper::toDTO).collect(Collectors.toList());
     }
 
     private static ModuleStyle extractModuleStyle(Module module) {
