@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/learning/modules")
+@RequestMapping("/learning/modules")
 public class ModuleController {
     private final ModuleRepository moduleRepository;
 
