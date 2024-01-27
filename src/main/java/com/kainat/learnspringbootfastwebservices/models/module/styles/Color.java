@@ -1,6 +1,6 @@
 package com.kainat.learnspringbootfastwebservices.models.module.styles;
 
-public enum ColorCode {
+public enum Color {
     INDIGO("INDIGO"),
     TEAL("TEAL"),
     PURPLE("PURPLE"),
@@ -12,7 +12,7 @@ public enum ColorCode {
 
     private final String color;
 
-    ColorCode(String color) {
+    Color(String color) {
         this.color = color;
     }
 

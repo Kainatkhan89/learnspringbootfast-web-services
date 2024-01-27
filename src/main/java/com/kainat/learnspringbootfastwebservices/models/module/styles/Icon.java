@@ -1,6 +1,6 @@
 package com.kainat.learnspringbootfastwebservices.models.module.styles;
 
-public enum IconCode {
+public enum Icon {
     BOOK("BOOK"),
     FLAG("FLAG"),
     TERMINAL("TERMINAL"),
@@ -12,7 +12,7 @@ public enum IconCode {
 
     private final String icon;
 
-    IconCode(String icon) {
+    Icon(String icon) {
         this.icon = icon;
     }
 
