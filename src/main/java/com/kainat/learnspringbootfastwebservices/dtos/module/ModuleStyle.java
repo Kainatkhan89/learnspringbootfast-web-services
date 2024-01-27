@@ -7,11 +7,6 @@ public class ModuleStyle {
     private Color color;
     private Icon icon;
 
-    public ModuleStyle(Color color, Icon icon) {
-        this.color = color;
-        this.icon = icon;
-    }
-
     public Color getColor() {
         return this.color;
     }

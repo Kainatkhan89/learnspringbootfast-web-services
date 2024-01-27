@@ -7,14 +7,6 @@ public class ModuleDTO {
     private String description;
     private ModuleStyle moduleStyle;
 
-    public ModuleDTO(int id, int number, String title, String description, ModuleStyle moduleStyle) {
-        this.id = id;
-        this.number = number;
-        this.title = title;
-        this.description = description;
-        this.moduleStyle = moduleStyle;
-    }
-
     public int getId() {
         return this.id;
     }
