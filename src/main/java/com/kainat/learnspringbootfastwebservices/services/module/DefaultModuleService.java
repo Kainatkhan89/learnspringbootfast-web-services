@@ -4,6 +4,7 @@ import com.kainat.learnspringbootfastwebservices.dtos.module.ModuleDTO;
 import com.kainat.learnspringbootfastwebservices.entities.module.Module;
 import com.kainat.learnspringbootfastwebservices.mappers.ModuleMapper;
 import com.kainat.learnspringbootfastwebservices.repositories.module.ModuleRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,6 +14,7 @@ public class DefaultModuleService implements ModuleService {
     private final ModuleRepository moduleRepository;
     private final ModuleMapper moduleMapper;
 
+    @Autowired
     public DefaultModuleService(ModuleRepository moduleRepository, ModuleMapper moduleMapper) {
         this.moduleRepository = moduleRepository;
         this.moduleMapper = moduleMapper;
