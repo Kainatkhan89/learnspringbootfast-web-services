@@ -5,7 +5,7 @@ public class ModuleDTO {
     private int number;
     private String title;
     private String description;
-    private ModuleStyle moduleStyle;
+    private ModuleStyle style;
 
     public int getId() {
         return this.id;
@@ -39,11 +39,11 @@ public class ModuleDTO {
         this.description = description;
     }
 
-    public ModuleStyle getModuleStyle() {
-        return this.moduleStyle;
+    public ModuleStyle getStyle() {
+        return this.style;
     }
 
-    public void setModuleStyle(ModuleStyle moduleStyle) {
-        this.moduleStyle = moduleStyle;
+    public void setStyle(ModuleStyle style) {
+        this.style = style;
     }
 }

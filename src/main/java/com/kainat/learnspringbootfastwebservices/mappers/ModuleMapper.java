@@ -25,7 +25,7 @@ public class ModuleMapper {
 
         if (module.getStyleCode() != null) {
             ModuleStyle moduleStyle = extractModuleStyle(module);
-            dto.setModuleStyle(moduleStyle);
+            dto.setStyle(moduleStyle);
         }
 
         return dto;
