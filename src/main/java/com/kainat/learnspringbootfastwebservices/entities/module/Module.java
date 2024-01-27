@@ -21,7 +21,7 @@ public class Module {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "style_code")
-    private ModuleStyleCode moduleStyleCode;
+    private ModuleStyleCode styleCode;
 
     public Module() {
     }
@@ -58,11 +58,11 @@ public class Module {
         this.description = description;
     }
 
-    public ModuleStyleCode getModuleStyleCode() {
-        return this.moduleStyleCode;
+    public ModuleStyleCode getStyleCode() {
+        return this.styleCode;
     }
 
-    public void setModuleStyleCode(ModuleStyleCode moduleStyleCode) {
-        this.moduleStyleCode = moduleStyleCode;
+    public void setStyleCode(ModuleStyleCode moduleStyleCode) {
+        this.styleCode = moduleStyleCode;
     }
 }
