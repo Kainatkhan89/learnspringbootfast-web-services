@@ -1,4 +1,4 @@
-package com.kainat.learnspringbootfastwebservices.models.module.styles;
+package com.kainat.learnspringbootfastwebservices.enums.styles;
 
 public enum Color {
     INDIGO("INDIGO"),
