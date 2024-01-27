@@ -1,4 +1,4 @@
-package com.kainat.learnspringbootfastwebservices.models.entities.module;
+package com.kainat.learnspringbootfastwebservices.models.module.styles;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

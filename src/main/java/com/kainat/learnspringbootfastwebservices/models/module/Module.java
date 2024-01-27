@@ -1,5 +1,6 @@
-package com.kainat.learnspringbootfastwebservices.models.entities.module;
+package com.kainat.learnspringbootfastwebservices.models.module;
 
+import com.kainat.learnspringbootfastwebservices.models.module.styles.ModuleStyleCode;
 import jakarta.persistence.*;
 
 @Entity
