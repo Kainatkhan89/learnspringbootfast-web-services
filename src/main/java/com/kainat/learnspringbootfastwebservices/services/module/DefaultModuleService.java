@@ -11,16 +11,18 @@ import java.util.List;
 @Service
 public class DefaultModuleService implements ModuleService {
     private final ModuleRepository moduleRepository;
+    private final ModuleMapper moduleMapper;
 
-    public DefaultModuleService(ModuleRepository moduleRepository) {
+    public DefaultModuleService(ModuleRepository moduleRepository, ModuleMapper moduleMapper) {
         this.moduleRepository = moduleRepository;
+        this.moduleMapper = moduleMapper;
     }
 
     @Override
     public List<ModuleDTO> getAllModules() {
         List<Module> modules = this.moduleRepository.findAll();
 
-        return ModuleMapper.toDTOList(modules);
+        return this.moduleMapper.toModuleDTOs(modules);
     }
 
     @Override

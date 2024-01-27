@@ -1,5 +1,6 @@
 package com.kainat.learnspringbootfastwebservices.entities.module;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.kainat.learnspringbootfastwebservices.entities.tutorial.Tutorial;
 import jakarta.persistence.*;
 
@@ -22,7 +23,8 @@ public class Module {
     @Column(name = "description")
     private String description;
 
-    @OneToMany(mappedBy = "module_id", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "module")
+    @JsonManagedReference
     private List<Tutorial> tutorials;
 
     @ManyToOne(fetch = FetchType.EAGER)

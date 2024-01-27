@@ -1,11 +1,16 @@
 package com.kainat.learnspringbootfastwebservices.dtos.module;
 
+import com.kainat.learnspringbootfastwebservices.entities.tutorial.Tutorial;
+
+import java.util.List;
+
 public class ModuleDTO {
     private int id;
     private int number;
     private String title;
     private String description;
     private ModuleStyle style;
+    private List<Tutorial> tutorials;
 
     public int getId() {
         return this.id;
@@ -45,5 +50,13 @@ public class ModuleDTO {
 
     public void setStyle(ModuleStyle style) {
         this.style = style;
+    }
+
+    public List<Tutorial> getTutorials() {
+        return this.tutorials;
+    }
+
+    public void setTutorials(List<Tutorial> tutorials) {
+        this.tutorials = tutorials;
     }
 }

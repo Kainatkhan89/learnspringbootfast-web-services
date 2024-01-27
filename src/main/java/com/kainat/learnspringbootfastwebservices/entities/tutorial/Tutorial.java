@@ -1,5 +1,7 @@
 package com.kainat.learnspringbootfastwebservices.entities.tutorial;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.kainat.learnspringbootfastwebservices.entities.module.Module;
 import jakarta.persistence.*;
 
@@ -14,8 +16,10 @@ public class Tutorial {
     @Column(name = "number")
     private int number;
 
-    @Column(name = "module_id")
-    private int module_id;
+    @ManyToOne
+    @JoinColumn(name = "module_id")
+    @JsonBackReference
+    private Module module;
 
     @Column(name = "title")
     private String title;
@@ -51,9 +55,13 @@ public class Tutorial {
         this.number = number;
     }
 
-    public int getModule_id() { return this.module_id; }
+    public Module getModule() {
+        return this.module;
+    }
 
-    public void setModule_id(int module_id) { this.module_id = module_id; }
+    public void setModule(Module module) {
+        this.module = module;
+    }
 
     public String getTitle() {
         return this.title;
