@@ -1,4 +1,4 @@
-package com.kainat.learnspringbootfastwebservices.persistence.entities.module;
+package com.kainat.learnspringbootfastwebservices.models.entities.module;
 
 import jakarta.persistence.*;
 
