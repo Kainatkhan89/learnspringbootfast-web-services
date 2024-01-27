@@ -8,7 +8,7 @@ public class SaveUserDTO {
     }
 
     public String getFirebaseId() {
-        return firebaseId;
+        return this.firebaseId;
     }
 
     public void setFirebaseId(String firebaseId) {
@@ -16,7 +16,7 @@ public class SaveUserDTO {
     }
 
     public String getEmail() {
-        return email;
+        return this.email;
     }
 
     public void setEmail(String email) {
