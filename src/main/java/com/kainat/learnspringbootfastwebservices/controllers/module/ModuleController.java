@@ -1,6 +1,7 @@
 package com.kainat.learnspringbootfastwebservices.controllers.module;
 
 import com.kainat.learnspringbootfastwebservices.dtos.module.ModuleDTO;
+import com.kainat.learnspringbootfastwebservices.entities.module.Module;
 import com.kainat.learnspringbootfastwebservices.services.module.ModuleService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,5 +21,10 @@ public class ModuleController {
     @GetMapping
     public List<ModuleDTO> getAllModules() {
         return this.moduleService.getAllModules();
+    }
+
+    @GetMapping("/no-dtos")
+    public List<Module> getAllModulesNoDTOs() {
+        return this.moduleService.getAllModulesNoDTO();
     }
 }

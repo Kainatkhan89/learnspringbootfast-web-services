@@ -14,9 +14,8 @@ public class Tutorial {
     @Column(name = "number")
     private int number;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "module_id", nullable = false)
-    private Module module;
+    @Column(name = "module_id")
+    private int module_id;
 
     @Column(name = "title")
     private String title;
@@ -52,13 +51,9 @@ public class Tutorial {
         this.number = number;
     }
 
-    public Module getModule() {
-        return this.module;
-    }
+    public int getModule_id() { return this.module_id; }
 
-    public void setModule(Module module) {
-        this.module = module;
-    }
+    public void setModule_id(int module_id) { this.module_id = module_id; }
 
     public String getTitle() {
         return this.title;

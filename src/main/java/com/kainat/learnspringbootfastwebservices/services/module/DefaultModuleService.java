@@ -22,4 +22,9 @@ public class DefaultModuleService implements ModuleService {
 
         return ModuleMapper.toDTOList(modules);
     }
+
+    @Override
+    public List<Module> getAllModulesNoDTO() {
+        return this.moduleRepository.findAll();
+    }
 }

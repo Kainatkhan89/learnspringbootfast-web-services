@@ -1,6 +1,9 @@
 package com.kainat.learnspringbootfastwebservices.entities.module;
 
+import com.kainat.learnspringbootfastwebservices.entities.tutorial.Tutorial;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "modules")
@@ -18,6 +21,9 @@ public class Module {
 
     @Column(name = "description")
     private String description;
+
+    @OneToMany(mappedBy = "module_id", fetch = FetchType.LAZY)
+    private List<Tutorial> tutorials;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "style_code")
@@ -56,6 +62,14 @@ public class Module {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public List<Tutorial> getTutorials() {
+        return this.tutorials;
+    }
+
+    public void setTutorials(List<Tutorial> tutorials) {
+        this.tutorials = tutorials;
     }
 
     public ModuleStyleCode getStyleCode() {
