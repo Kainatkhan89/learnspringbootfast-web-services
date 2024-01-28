@@ -1,5 +1,6 @@
 package com.kainat.learnspringbootfastwebservices.entities.progress;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.kainat.learnspringbootfastwebservices.entities.tutorial.Tutorial;
 import com.kainat.learnspringbootfastwebservices.entities.user.User;
 import jakarta.persistence.*;
@@ -14,10 +15,12 @@ public class UserTutorialProgress {
 
     @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "user_id")
+    @JsonBackReference
     private User user;
 
     @ManyToOne
     @JoinColumn(name = "tutorial_id", referencedColumnName = "tutorial_id")
+    @JsonBackReference
     private Tutorial tutorial;
 
     public UserTutorialProgress() {

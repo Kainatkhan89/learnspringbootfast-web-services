@@ -1,5 +1,6 @@
 package com.kainat.learnspringbootfastwebservices.entities.user;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.kainat.learnspringbootfastwebservices.entities.progress.UserTutorialProgress;
 import jakarta.persistence.*;
 
@@ -17,6 +18,7 @@ public class User {
     private String email;
 
     @OneToMany(mappedBy = "user")
+    @JsonManagedReference
     private List<UserTutorialProgress> userCompletedTutorials;
 
     public User() {

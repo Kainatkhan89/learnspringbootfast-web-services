@@ -40,6 +40,7 @@ public class Tutorial {
     private int durationSeconds;
 
     @OneToMany(mappedBy = "tutorial")
+    @JsonManagedReference
     private List<UserTutorialProgress> tutorialCompletedByUsers;
 
     public Tutorial() {
