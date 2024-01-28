@@ -1,9 +1,9 @@
 package com.kainat.learnspringbootfastwebservices.entities.user;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.kainat.learnspringbootfastwebservices.entities.progress.UserTutorialProgress;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -15,6 +15,9 @@ public class User {
 
     @Column(name = "email")
     private String email;
+
+    @OneToMany(mappedBy = "user")
+    private List<UserTutorialProgress> userCompletedTutorials;
 
     public User() {
     }

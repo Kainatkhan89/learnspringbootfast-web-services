@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "user_tutorial_progresses")
-public class UserProgress {
+public class UserTutorialProgress {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,7 +20,7 @@ public class UserProgress {
     @JoinColumn(name = "tutorial_id", referencedColumnName = "tutorial_id")
     private Tutorial tutorial;
 
-    public UserProgress() {
+    public UserTutorialProgress() {
     }
 
     public void setId(Long id) {

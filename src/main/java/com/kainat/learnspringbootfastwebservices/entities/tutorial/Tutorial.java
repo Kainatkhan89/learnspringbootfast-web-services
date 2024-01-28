@@ -3,7 +3,10 @@ package com.kainat.learnspringbootfastwebservices.entities.tutorial;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.kainat.learnspringbootfastwebservices.entities.module.Module;
+import com.kainat.learnspringbootfastwebservices.entities.progress.UserTutorialProgress;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "tutorials")
@@ -20,6 +23,9 @@ public class Tutorial {
     @JoinColumn(name = "module_id")
     @JsonBackReference
     private Module module;
+
+    @OneToMany(mappedBy = "tutorial")
+    private List<UserTutorialProgress> tutorialCompletedByUsers;
 
     @Column(name = "title")
     private String title;
