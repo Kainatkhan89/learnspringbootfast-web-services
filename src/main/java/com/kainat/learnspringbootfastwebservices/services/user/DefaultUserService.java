@@ -7,11 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class FirebaseUserService implements UserService {
+public class DefaultUserService implements UserService {
     private final UserRepository userRepository;
 
     @Autowired
-    public FirebaseUserService(UserRepository userRepository) {
+    public DefaultUserService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
