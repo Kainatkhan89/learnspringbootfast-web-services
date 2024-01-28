@@ -2,7 +2,7 @@ package com.kainat.learnspringbootfastwebservices.services.module;
 
 import com.kainat.learnspringbootfastwebservices.dtos.module.ModuleDTO;
 import com.kainat.learnspringbootfastwebservices.entities.module.Module;
-import com.kainat.learnspringbootfastwebservices.mappers.ModuleMapper;
+import com.kainat.learnspringbootfastwebservices.mappers.module.ModuleMapper;
 import com.kainat.learnspringbootfastwebservices.repositories.module.ModuleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

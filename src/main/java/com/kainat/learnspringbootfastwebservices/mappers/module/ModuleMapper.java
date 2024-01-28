@@ -1,4 +1,4 @@
-package com.kainat.learnspringbootfastwebservices.mappers;
+package com.kainat.learnspringbootfastwebservices.mappers.module;
 
 import com.kainat.learnspringbootfastwebservices.dtos.module.ModuleDTO;
 import com.kainat.learnspringbootfastwebservices.entities.module.Module;
