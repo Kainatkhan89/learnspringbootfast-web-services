@@ -24,9 +24,6 @@ public class Tutorial {
     @JsonBackReference
     private Module module;
 
-    @OneToMany(mappedBy = "tutorial")
-    private List<UserTutorialProgress> tutorialCompletedByUsers;
-
     @Column(name = "title")
     private String title;
 
@@ -41,6 +38,9 @@ public class Tutorial {
 
     @Column(name = "duration_seconds")
     private int durationSeconds;
+
+    @OneToMany(mappedBy = "tutorial")
+    private List<UserTutorialProgress> tutorialCompletedByUsers;
 
     public Tutorial() {
     }
@@ -107,5 +107,13 @@ public class Tutorial {
 
     public void setDurationSeconds(int durationSeconds) {
         this.durationSeconds = durationSeconds;
+    }
+
+    public List<UserTutorialProgress> getTutorialCompletedByUsers() {
+        return tutorialCompletedByUsers;
+    }
+
+    public void setTutorialCompletedByUsers(List<UserTutorialProgress> tutorialCompletedByUsers) {
+        this.tutorialCompletedByUsers = tutorialCompletedByUsers;
     }
 }
