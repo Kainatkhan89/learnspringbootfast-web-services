@@ -5,7 +5,7 @@ import com.kainat.learnspringbootfastwebservices.dtos.progress.ProgressUpdateReq
 import com.kainat.learnspringbootfastwebservices.entities.progress.UserTutorialProgress;
 import com.kainat.learnspringbootfastwebservices.entities.tutorial.Tutorial;
 import com.kainat.learnspringbootfastwebservices.entities.user.User;
-import com.kainat.learnspringbootfastwebservices.mappers.tutorial.TutorialMapper;
+import com.kainat.learnspringbootfastwebservices.mappers.TutorialMapper;
 import com.kainat.learnspringbootfastwebservices.repositories.progress.UserTutorialProgressRepository;
 import com.kainat.learnspringbootfastwebservices.repositories.tutorial.TutorialRepository;
 import com.kainat.learnspringbootfastwebservices.repositories.user.UserRepository;
