@@ -1,6 +1,6 @@
 package com.kainat.learnspringbootfastwebservices.services.user;
 
-import com.kainat.learnspringbootfastwebservices.dtos.user.SaveUserDTO;
+import com.kainat.learnspringbootfastwebservices.dtos.user.SaveUserRequest;
 import com.kainat.learnspringbootfastwebservices.entities.user.User;
 import com.kainat.learnspringbootfastwebservices.repositories.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,7 @@ public class FirebaseUserService implements UserService {
         this.userRepository = userRepository;
     }
 
-    public User saveUser(SaveUserDTO saveUserDTO) {
+    public User saveUser(SaveUserRequest saveUserDTO) {
         User user = new User();
 
         user.setFirebaseId(saveUserDTO.getFirebaseId());

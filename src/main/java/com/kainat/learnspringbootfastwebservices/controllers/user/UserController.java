@@ -1,6 +1,6 @@
 package com.kainat.learnspringbootfastwebservices.controllers.user;
 
-import com.kainat.learnspringbootfastwebservices.dtos.user.SaveUserDTO;
+import com.kainat.learnspringbootfastwebservices.dtos.user.SaveUserRequest;
 import com.kainat.learnspringbootfastwebservices.entities.user.User;
 import com.kainat.learnspringbootfastwebservices.services.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +20,7 @@ public class UserController {
     }
 
     @PostMapping
-    public User saveUser(@RequestBody SaveUserDTO saveUserDTO) {
-        return this.userService.saveUser(saveUserDTO);
+    public User saveUser(@RequestBody SaveUserRequest saveUserRequest) {
+        return this.userService.saveUser(saveUserRequest);
     }
 }
