@@ -18,7 +18,7 @@ public class FirebaseUserService implements UserService {
     public User saveUser(SaveUserRequest saveUserDTO) {
         User user = new User();
 
-        user.setFirebaseId(saveUserDTO.getFirebaseId());
+        user.setId(saveUserDTO.getUserId());
         user.setEmail(saveUserDTO.getEmail());
 
         return this.userRepository.save(user);

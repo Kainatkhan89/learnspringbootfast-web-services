@@ -1,18 +1,18 @@
 package com.kainat.learnspringbootfastwebservices.dtos.user;
 
 public class SaveUserRequest {
-    private String firebaseId;
+    private String userId;
     private String email;
 
     public SaveUserRequest() {
     }
 
-    public String getFirebaseId() {
-        return this.firebaseId;
+    public String getUserId() {
+        return this.userId;
     }
 
-    public void setFirebaseId(String firebaseId) {
-        this.firebaseId = firebaseId;
+    public void setUserId(String firebaseId) {
+        this.userId = firebaseId;
     }
 
     public String getEmail() {

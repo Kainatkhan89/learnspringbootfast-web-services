@@ -10,8 +10,8 @@ import jakarta.persistence.Table;
 public class User {
 
     @Id
-    @Column(name = "firebase_id")
-    private String firebaseId;
+    @Column(name = "user_id")
+    private String id;
 
     @Column(name = "email")
     private String email;
@@ -19,12 +19,12 @@ public class User {
     public User() {
     }
 
-    public String getFirebaseId() {
-        return this.firebaseId;
+    public String getId() {
+        return this.id;
     }
 
-    public void setFirebaseId(String firebaseId) {
-        this.firebaseId = firebaseId;
+    public void setId(String firebaseId) {
+        this.id = firebaseId;
     }
 
     public String getEmail() {
