@@ -22,7 +22,7 @@ public class DefaultModuleService implements ModuleService {
 
     @Override
     public List<ModuleDTO> getAllModules() {
-        List<Module> modules = this.moduleRepository.findAll();
+        List<Module> modules = this.moduleRepository.findAllWithTutorials();
 
         return this.moduleMapper.toModuleDTOs(modules);
     }
