@@ -1,4 +1,4 @@
-package com.kainat.learnspringbootfastwebservices.controller;
+package com.kainat.learnspringbootfastwebservices.controllers;
 
 import com.kainat.learnspringbootfastwebservices.entities.Module;
 import com.kainat.learnspringbootfastwebservices.repositories.ModuleRepository;
