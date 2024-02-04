@@ -5,10 +5,7 @@ import com.kainat.learnspringbootfastwebservices.entities.CompletedTutorial;
 import com.kainat.learnspringbootfastwebservices.services.LearningProgressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,9 +19,10 @@ public class LearningProgressController {
         this.learningProgressService = learningProgressService;
     }
 
-    @GetMapping()
-    public ResponseEntity<List<CompletedTutorial>> getUserProgress() {
-        return null;
+    @GetMapping("/{userId}")
+    public ResponseEntity<List<CompletedTutorial>> getUserProgress(@PathVariable String userId) {
+        List<CompletedTutorial> userCompletedTutorials = this.learningProgressService.getUserProgress(userId);
+        return ResponseEntity.ok(userCompletedTutorials);
     }
 
     public ResponseEntity<CompletedTutorial> updateUserProgress(@RequestBody UpdateProgressRequest updateProgressRequest) {
