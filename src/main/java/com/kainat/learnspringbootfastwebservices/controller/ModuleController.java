@@ -22,7 +22,8 @@ public class ModuleController {
 
     @GetMapping
     public ResponseEntity<List<Module>> getModules() {
-        List<Module> modules = this.moduleRepository.findAll();
+        List<Module> modules = this.moduleRepository.getAllWithTutorials();
+
         return ResponseEntity.ok(modules);
     }
 }

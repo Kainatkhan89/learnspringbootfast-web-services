@@ -1,9 +1,9 @@
 package com.kainat.learnspringbootfastwebservices.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "modules")
@@ -23,6 +23,10 @@ public class Module {
 
     @Column(name = "style_code")
     private Integer styleCode;
+
+    @OneToMany()
+    @JoinColumn(name = "module_id")
+    private Set<Tutorial> tutorials = new HashSet<>();
 
     public Module() {
     }
@@ -65,5 +69,13 @@ public class Module {
 
     public void setStyleCode(Integer styleCode) {
         this.styleCode = styleCode;
+    }
+
+    public Set<Tutorial> getTutorials() {
+        return this.tutorials;
+    }
+
+    public void setTutorials(Set<Tutorial> tutorials) {
+        this.tutorials = tutorials;
     }
 }
