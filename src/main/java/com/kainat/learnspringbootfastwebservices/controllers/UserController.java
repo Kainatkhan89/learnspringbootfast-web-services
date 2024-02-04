@@ -7,6 +7,7 @@ import com.kainat.learnspringbootfastwebservices.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,7 +22,7 @@ public class UserController {
     }
 
     @PostMapping(value = "save")
-    public ResponseEntity<User> saveUser(SaveUserRequest saveUserRequest) {
+    public ResponseEntity<User> saveUser(@RequestBody SaveUserRequest saveUserRequest) {
         User userToSave = UserMapper.toUser(saveUserRequest);
         User savedUser = this.userService.saveUser(userToSave);
 
