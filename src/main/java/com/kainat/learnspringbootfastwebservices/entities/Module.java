@@ -21,12 +21,13 @@ public class Module {
     @Column(name = "description")
     private String description;
 
-    @Column(name = "style_code")
-    private Integer styleCode;
-
     @OneToMany()
     @JoinColumn(name = "module_id")
     private Set<Tutorial> tutorials = new HashSet<>();
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "style_code")
+    private ModuleStyleCode styleCode;
 
     public Module() {
     }
@@ -63,11 +64,11 @@ public class Module {
         this.description = description;
     }
 
-    public Integer getStyleCode() {
+    public ModuleStyleCode getStyleCode() {
         return this.styleCode;
     }
 
-    public void setStyleCode(Integer styleCode) {
+    public void setStyleCode(ModuleStyleCode styleCode) {
         this.styleCode = styleCode;
     }
 
