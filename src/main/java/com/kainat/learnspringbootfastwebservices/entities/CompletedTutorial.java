@@ -13,7 +13,7 @@ public class CompletedTutorial {
     private String userId;
 
     @Column(name = "tutorial_id")
-    private String completedTutorialId;
+    private Integer completedTutorialId;
 
     public CompletedTutorial() {
     }
@@ -34,11 +34,11 @@ public class CompletedTutorial {
         this.userId = userId;
     }
 
-    public String getCompletedTutorialId() {
+    public Integer getCompletedTutorialId() {
         return this.completedTutorialId;
     }
 
-    public void setCompletedTutorialId(String completedTutorialId) {
+    public void setCompletedTutorialId(Integer completedTutorialId) {
         this.completedTutorialId = completedTutorialId;
     }
 }
