@@ -2,6 +2,7 @@ package com.kainat.learnspringbootfastwebservices.controllers;
 
 import com.kainat.learnspringbootfastwebservices.dtos.UpdateProgressRequest;
 import com.kainat.learnspringbootfastwebservices.entities.CompletedTutorial;
+import com.kainat.learnspringbootfastwebservices.mappers.LearningProgressMapper;
 import com.kainat.learnspringbootfastwebservices.services.LearningProgressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -25,7 +26,11 @@ public class LearningProgressController {
         return ResponseEntity.ok(userCompletedTutorialIds);
     }
 
+    @PostMapping("/update")
     public ResponseEntity<CompletedTutorial> updateUserProgress(@RequestBody UpdateProgressRequest updateProgressRequest) {
-        return null;
+        CompletedTutorial completedTutorialToSave = LearningProgressMapper.toCompletedTutorial(updateProgressRequest);
+        CompletedTutorial savedCompletedTutorial = this.learningProgressService.updateUserProgress(completedTutorialToSave);
+
+        return ResponseEntity.ok(savedCompletedTutorial);
     }
 }
