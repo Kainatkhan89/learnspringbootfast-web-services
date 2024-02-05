@@ -1,6 +1,6 @@
 package com.kainat.learnspringbootfastwebservices.controllers;
 
-import com.kainat.learnspringbootfastwebservices.dtos.UpdateProgressRequest;
+import com.kainat.learnspringbootfastwebservices.dtos.UpdateLearningProgressRequest;
 import com.kainat.learnspringbootfastwebservices.entities.CompletedTutorial;
 import com.kainat.learnspringbootfastwebservices.mappers.LearningProgressMapper;
 import com.kainat.learnspringbootfastwebservices.services.LearningProgressService;
@@ -27,8 +27,8 @@ public class LearningProgressController {
     }
 
     @PostMapping("/update")
-    public ResponseEntity<CompletedTutorial> updateUserProgress(@RequestBody UpdateProgressRequest updateProgressRequest) {
-        CompletedTutorial completedTutorialToSave = LearningProgressMapper.toCompletedTutorial(updateProgressRequest);
+    public ResponseEntity<CompletedTutorial> updateUserProgress(@RequestBody UpdateLearningProgressRequest updateLearningProgressRequest) {
+        CompletedTutorial completedTutorialToSave = LearningProgressMapper.toCompletedTutorial(updateLearningProgressRequest);
         CompletedTutorial savedCompletedTutorial = this.learningProgressService.updateUserProgress(completedTutorialToSave);
 
         return ResponseEntity.ok(savedCompletedTutorial);

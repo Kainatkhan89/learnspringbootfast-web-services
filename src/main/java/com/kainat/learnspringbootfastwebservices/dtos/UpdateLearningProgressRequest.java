@@ -1,10 +1,10 @@
 package com.kainat.learnspringbootfastwebservices.dtos;
 
-public class UpdateProgressRequest {
+public class UpdateLearningProgressRequest {
     private String userId;
     private Integer completedTutorialId;
 
-    public UpdateProgressRequest() {
+    public UpdateLearningProgressRequest() {
     }
 
     public String getUserId() {
