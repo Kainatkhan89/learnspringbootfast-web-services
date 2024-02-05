@@ -5,6 +5,6 @@ import com.kainat.learnspringbootfastwebservices.entities.CompletedTutorial;
 import java.util.List;
 
 public interface LearningProgressService {
-    List<CompletedTutorial> getUserProgress(String userId);
+    List<Integer> getUserCompletedTutorials(String userId);
     CompletedTutorial updateUserProgress(CompletedTutorial completedTutorial);
 }

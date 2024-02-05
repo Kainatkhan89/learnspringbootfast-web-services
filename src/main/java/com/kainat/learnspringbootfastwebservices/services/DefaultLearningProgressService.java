@@ -15,8 +15,8 @@ public class DefaultLearningProgressService implements LearningProgressService {
     }
 
     @Override
-    public List<CompletedTutorial> getUserProgress(String userId) {
-        return this.learningProgressRepository.findByUserId(userId);
+    public List<Integer> getUserCompletedTutorials(String userId) {
+        return this.learningProgressRepository.findCompletedTutorialIdsByUserId(userId);
     }
 
     @Override

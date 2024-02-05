@@ -20,9 +20,9 @@ public class LearningProgressController {
     }
 
     @GetMapping("/{userId}")
-    public ResponseEntity<List<CompletedTutorial>> getUserProgress(@PathVariable String userId) {
-        List<CompletedTutorial> userCompletedTutorials = this.learningProgressService.getUserProgress(userId);
-        return ResponseEntity.ok(userCompletedTutorials);
+    public ResponseEntity<List<Integer>> getUserProgress(@PathVariable String userId) {
+        List<Integer> userCompletedTutorialIds = this.learningProgressService.getUserCompletedTutorials(userId);
+        return ResponseEntity.ok(userCompletedTutorialIds);
     }
 
     public ResponseEntity<CompletedTutorial> updateUserProgress(@RequestBody UpdateProgressRequest updateProgressRequest) {
