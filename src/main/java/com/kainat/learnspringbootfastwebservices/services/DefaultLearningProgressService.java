@@ -3,6 +3,7 @@ package com.kainat.learnspringbootfastwebservices.services;
 import com.kainat.learnspringbootfastwebservices.entities.CompletedTutorial;
 import com.kainat.learnspringbootfastwebservices.repositories.LearningProgressRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -22,5 +23,11 @@ public class DefaultLearningProgressService implements LearningProgressService {
     @Override
     public CompletedTutorial updateUserProgress(CompletedTutorial completedTutorial) {
         return this.learningProgressRepository.save(completedTutorial);
+    }
+
+    @Override
+    @Transactional
+    public void resetUserProgress(String userId) {
+        this.learningProgressRepository.deleteByUserId(userId);
     }
 }

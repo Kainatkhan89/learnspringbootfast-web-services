@@ -7,4 +7,5 @@ import java.util.List;
 public interface LearningProgressService {
     List<Integer> getUserCompletedTutorials(String userId);
     CompletedTutorial updateUserProgress(CompletedTutorial completedTutorial);
+    void resetUserProgress(String userId);
 }
